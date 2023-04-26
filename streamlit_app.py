@@ -48,12 +48,14 @@ def get_fruit_load_list():
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
         my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')")
-    return "Thanks for adding " + new_fruit
+        return "Thanks for adding " + new_fruit
 
-# Add new fruits to the list
-new_fruits = ["jackfruit", "papaya", "guava", "kiwi"]
-for fruit in new_fruits:
-    insert_row_snowflake(fruit)
+
+insert_row_snowflake("jackfruit")
+insert_row_snowflake("papaya")
+insert_row_snowflake("guava")
+insert_row_snowflake("kiwi")
+
     
 # Remove test and from streamlit rows
 delete_rows_snowflake(["test", "from streamlit"])
