@@ -38,17 +38,17 @@ except:
   streamlit.error("Error occurred while retrieving data from Fruityvice API.")
 
 streamlit.header ("The fruit load list contains:")
-#Snowflake-related functions
-#def get_fruit_load_list(new_fruit):
-  #with my_cnx.cursor() as my_cur:
-    #my_cur.execute("INSERT INTO fruit_load_list VALUES ('" + new_fruit + "')")
-    #return my_cur.fetchall()
+Snowflake-related functions
+def get_fruit_load_list(new_fruit):
+  with my_cnx.cursor() as my_cur:
+    my_cur.execute("INSERT INTO fruit_load_list VALUES ('" + new_fruit + "')")
+    return my_cur.fetchall()
   
 # Function to insert a row into the fruit_load_list table in Snowflake
-def insert_row_snowflake(new_fruit):
+'''def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
          my_cur.execute("INSERT INTO fruit_load_list VALUES ('" + new_fruit + "')")
-         return "Thanks for adding " + new_fruit
+         return "Thanks for adding " + new_fruit'''
 
 # Add new fruits to the list
 #insert_row_snowflake("jackfruit")
