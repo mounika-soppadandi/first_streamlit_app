@@ -51,10 +51,10 @@ def insert_row_snowflake(new_fruit):
     return "Thanks for adding " + new_fruit
 
 # Add new fruits to the list
-insert_row_snowflake("jackfruit")
-insert_row_snowflake("papaya")
-insert_row_snowflake("guava")
-insert_row_snowflake("kiwi")
+#insert_row_snowflake("jackfruit")
+#insert_row_snowflake("papaya")
+#insert_row_snowflake("guava")
+#insert_row_snowflake("kiwi")
 
     
 # Remove test and from streamlit rows
