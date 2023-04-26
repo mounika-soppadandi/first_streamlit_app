@@ -44,13 +44,13 @@ streamlit.header ("The fruit load list contains:")
     #my_cur.execute("select * from fruit_load_list")
     #return my_cur.fetchall()
   
-# Allow the end user to add a fruit to the list
+# Function to insert a row into the fruit_load_list table in Snowflake
 def insert_row_snowflake(new_fruit):
     with my_cnx.cursor() as my_cur:
-        my_cur.execute("insert into fruit_load_list values ('" + new_fruit + "')")
-        return "Thanks for adding " + new_fruit
+        my_cur.execute("INSERT INTO fruit_load_list VALUES ('" + new_fruit + "')")
+    return "Thanks for adding " + new_fruit
 
-
+# Add new fruits to the list
 insert_row_snowflake("jackfruit")
 insert_row_snowflake("papaya")
 insert_row_snowflake("guava")
