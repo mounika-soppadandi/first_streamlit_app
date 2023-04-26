@@ -60,22 +60,6 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe (back_from_function)
-''' my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur = my_cnx.cursor ()
-#my_cur.execute("select * from pc_rivery_db.public.fruit_load_list")
-#my_data_row = my_cur. fetchone ()
-#streamlit.text ("the fruite load list")
-#streamlit.text(my_data_row)
-
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-streamlit. header ("The fruit load list count")
-streamlit.dataframe (my_data_rows)
-add_my_fruit = streamlit.text_input('What fruit would you like to add?','jackfurit')
-streamlit.write('The user entered ', add_my_fruit)
-streamlit.text('thanks for adding ' + add_my_fruit)
-#This will not work correctly, but just go with it for now
-my_cur.execute("insert into fruit_load_list values ('from streamlit')")'''
 
 streamlit.header ("The fruit load list contains:")
 #Snowflake-related functions
