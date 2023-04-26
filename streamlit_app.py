@@ -58,7 +58,7 @@ insert_row_snowflake("kiwi")
 
     
 # Remove test and from streamlit rows
-delete_rows_snowflake(["test", "from streamlit"])
+#delete_rows_snowflake(["test", "from streamlit"])
 
 
 # Add a button to load the fruit
