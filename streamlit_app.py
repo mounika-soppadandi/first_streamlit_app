@@ -3,6 +3,7 @@ import pandas
 import requests
 import snowflake.connector
 from urllib.error import URLError
+
 streamlit.title('My Parents new Healthy Diner') 
 streamlit.header('Menu')
 streamlit.text('chepathi curry')
@@ -55,6 +56,8 @@ def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     my_cur.execute("select * from fruit_load_list")
     return my_cur.fetchall()  # Fixed typo here
+
+
 
 # Add a button to load the fruit
 if streamlit.button('Get Fruit Load List'):
